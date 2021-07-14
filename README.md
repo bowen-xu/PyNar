@@ -92,7 +92,7 @@ For example, after cloning the OpenNARS project to `D:/Codes/opennars` and build
 D:\Codes\opennars\opennars\target\classes
 ```
 
-We will refer to this path in [Installing Pynar](#installing-pynar).
+We will refer to this path in [Installing PyNar](#installing-pynar).
 
 To build [OpenNARS][3], please refer to [README.md][2] of OpenNARS. Roughly, we shoud:
 
