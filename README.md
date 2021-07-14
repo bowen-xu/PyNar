@@ -86,7 +86,7 @@ Before install PyNar, some dependecies should be met first, including:
 
 The interface is dependent on [OpenNARS v3.0.4][1]. Please make sure that OpenNARS project has been built, and `*.class` or `*.jar` files are available.
 
-For example, after cloning the OpenNARS project to `D:/Codes/opennars` and build them in [IntelliJ IDEA](https://www.jetbrains.com/idea/download/), the target `*.class` files are generated in `<opennars_dir>\opennars\target\classes`, e.g. 
+For example, after cloning the OpenNARS project to `D:/Codes/opennars` and build them in [IntelliJ IDEA](https://www.jetbrains.com/idea/download/), the `*.class` target files are generated in `<opennars_dir>\opennars\target\classes`, e.g. 
 
 ```
 D:\Codes\opennars\opennars\target\classes
@@ -100,7 +100,7 @@ To build [OpenNARS][3], please refer to [README.md][2] of OpenNARS. Roughly, we 
 2. Install IntelliJ IDEA.
 3. Build the OpenNARS project.
 
-We might not follow the steps if we have installed them or we have had the target `*.class` or `*.jar` files of OpenNARS. Note that the Java packages `com.google.common.io.Resources` and `org/apache/commons/lang3/StringUtils` are needed, which could be automatically installed if we build the project with IntelliJ IDEA; if so, we should find the corresponding paths of the two packages, for example, they are
+We might not follow the steps if we have installed them or we have had the `*.class` or `*.jar` target files of OpenNARS. Note that the Java packages `com.google.common.io.Resources` and `org.apache.commons.lang3.StringUtils` are needed, which could be automatically installed if we build the project with IntelliJ IDEA; if so, we should find the corresponding paths of the two packages, for example, they are
 
 ```
 C:\Users\<Username>\.m2\repository\com\google\guava\guava\25.1-jre\guava-25.1-jre.jar
