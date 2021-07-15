@@ -86,10 +86,10 @@ Before install PyNar, some dependecies should be met first, including:
 
 The interface is dependent on [OpenNARS v3.0.4][1]. Please make sure that OpenNARS project has been built, and `*.class` or `*.jar` files are available.
 
-For example, after cloning the OpenNARS project to `D:/Codes/opennars` and build them in [IntelliJ IDEA](https://www.jetbrains.com/idea/download/), the `*.class` target files are generated in `<opennars_dir>\opennars\target\classes`, e.g. 
+For example, after cloning the OpenNARS project to `D:/Codes/opennars` and build them in [IntelliJ IDEA](https://www.jetbrains.com/idea/download/), the `*.class` target files are generated in `<opennars_dir>/opennars/target/classes`, e.g. 
 
 ```
-D:\Codes\opennars\opennars\target\classes
+D:/Codes/opennars/opennars/target/classes
 ```
 
 We will refer to this path in [Installing PyNar](#installing-pynar).
@@ -103,8 +103,8 @@ To build [OpenNARS][3], please refer to [README.md][2] of OpenNARS. Roughly, we 
 We might not follow the steps if we have installed them or we have had the `*.class` or `*.jar` target files of OpenNARS. Note that the Java packages `com.google.common.io.Resources` and `org.apache.commons.lang3.StringUtils` are needed, which could be automatically installed if we build the project with IntelliJ IDEA; if so, we should find the corresponding paths of the two packages, for example, they are
 
 ```
-C:\Users\<Username>\.m2\repository\com\google\guava\guava\25.1-jre\guava-25.1-jre.jar
-C:\Users\<Username>\.m2\repository\org\apache\commons\commons-lang3\3.7\commons-lang3-3.7.jar
+C:/Users/<Username>/.m2/repository/com/google/guava/guava/25.1-jre/guava-25.1-jre.jar
+C:/Users/<Username>/.m2/repository/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7.jar
 ```
 
 Of course, we may also downlowd the packages and store them in other directories.
@@ -116,12 +116,12 @@ Now Java Environment is configured and the OpenNARS project has been built.
 
 In order to use the python interface to NARS, we should
 
-1. copy the file PyNar.java into the directory `<opennars_dir>\opennars\src\main\java\org\opennars\main`, and rebuild the project,
+1. copy the file PyNar.java into the directory `<opennars_dir>/opennars/src/main/java/org/opennars/main`, and rebuild the project,
 2. edit the file `paths.txt`, adding into it the paths
-   -  to the directory of `.class` files, i.e. `<opennars_dir>\\opennars\\target\\classes`,
-   - to the package `guava-25.1-jre.jar`, e.g. `C:\\Users\\<Username>\\.m2\\repository\\com\\google\\guava\\guava\\25.1-jre\\guava-25.1-jre.jar`,
-   - and to the package `commons-lang3-3.7.jar`, e.g. `C:\\Users\\<Username>\\.m2\\repository\\org\\apache\\commons\\commons-lang3\\3.7\\commons-lang3-3.7.jar`.
-3. run cmd `python -m pynar.path_config <dir>\paths.txt` to copy the `paths.txt` into the root directory of the module `PyNar`.
+   -  to the directory of `.class` files, i.e. `<opennars_dir>/opennars/target/classes`,
+   - to the package `guava-25.1-jre.jar`, e.g. `C:/Users/<Username>/.m2/repository/com/google/guava/guava/25.1-jre/guava-25.1-jre.jar`,
+   - and to the package `commons-lang3-3.7.jar`, e.g. `C:/Users/<Username>/.m2/repository/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7.jar`.
+3. run cmd `python -m pynar.path_config <dir>/paths.txt` to copy the `paths.txt` into the root directory of the module `PyNar`.
 4. run the demo
    ```
    python -m pynar.demo
