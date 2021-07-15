@@ -32,7 +32,7 @@ Run the reasoner with a maximun cycles:
 cycles_left, outputs = nar.cycles(200)
 ```
 
-If there is any objects in the output queue, the reasoning loop will be breaked, and the cycles left is available for developers.
+If there is any objects in the output queue, the reasoning loop will be breaked, and the #cycles left is available for developers.
 
 Print the outputs:
 ```Python
