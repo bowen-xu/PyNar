@@ -138,6 +138,11 @@ cycles left: 62
 cycles left: 0
 [EXE] $0.40;0.90;0.95$ ^left([{SELF}])=null
 ```
+## TODO
+
+An automatic installation program is needed.
+
+Interface to other functions in NARS is expected.
 
 ## Links
 
