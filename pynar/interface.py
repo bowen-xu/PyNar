@@ -17,7 +17,7 @@ class PyNar:
         self.nar.debug(d)
 
     def _set_log_path(self, log_path):
-        self.nar.set_log_path(log_path)
+        self.nar.set_log_path(str(log_path))
     
     def log_start(self, append: bool=False, log_path: str='./log.txt'):
         self._set_log_path(log_path)

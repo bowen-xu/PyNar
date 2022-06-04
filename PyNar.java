@@ -102,23 +102,26 @@ public class PyNar {
         return this.queue_out;
     }
 
-    public Map<String, Object> cycles(int max_cycles) {
+    public void clear_queue() {
         queue_out.clear();
+    }
+
+    public Map<String, Object> cycles(int max_cycles) {
+        Map<String, Object> ret_map = new HashMap<String, Object>();
 
         int cycles_left = 0;
         for(int i = 0; i<max_cycles; i++) {
-            nar.cycles(1);
-//            nar.cycle();
             if (queue_out.size() > 0) {
                 cycles_left = max_cycles - i;
                 break;
             }
+            nar.cycles(1);
         }
-
-
-        Map<String, Object> ret_map = new HashMap<String, Object>();
+        Queue<Object> queue_out_ = new LinkedList<Object>(queue_out);
+        clear_queue();
         ret_map.put("cycles_left", cycles_left);
-        ret_map.put("queue_out", queue_out);
+        ret_map.put("queue_out", queue_out_);
+
         return ret_map;
     }
 
@@ -148,7 +151,7 @@ public class PyNar {
     public static final class LOG {
     }
 
-    public boolean start_log(boolean append) {
+    public boolean log_start(boolean append) {
         if (logFilePath == null) {
             return false;
         }
@@ -165,7 +168,7 @@ public class PyNar {
         return false;
     }
 
-    public void stop_log() {
+    public void log_stop() {
         if (logFile != null) {
             output(LOG.class, "Stream saved: " + logFilePath);
             logFile.close();
@@ -187,6 +190,7 @@ public class PyNar {
         pynar.addInput("<bird-->animal>.");
         pynar.addInput("<robin-->bird>.");
         pynar.addInput("<robin-->animal>?");
+        Map<String, Object> results = pynar.cycles(10);
         pynar.addInput("5");
         pynar.addInput("<(*,{SELF})-->^left>! :|:");
         pynar.addInput("30");
